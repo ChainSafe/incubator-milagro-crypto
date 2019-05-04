@@ -1,14 +1,10 @@
-export enum Curves {
-    BLS381 = 'BLS381',
-}
-
 export class ECP {
 
-    static generator(): ECP;
+    generator(): ECP;
 
-    static fromBytes(array: Uint8Array): ECP;
+    fromBytes(array: Uint8Array): ECP;
 
-    static mapit(hash: Uint8Array): ECP;
+    mapit(hash: Uint8Array): ECP;
 
     is_infinity(): boolean;
 
@@ -34,7 +30,7 @@ export class ECP {
 
     getX(): ECP;
 
-    toBytes(): Uint8Array;
+    toBytes(destination: Uint8Array, compress: boolean): void;
 
     equals(p: ECP): boolean;
 
@@ -51,7 +47,7 @@ export class BIG {
 }
 
 export class CTX {
-    public constructor(curve: Curves);
+    public constructor(curve: string);
 
     public ECP: ECP;
     public BIG: BIG;
