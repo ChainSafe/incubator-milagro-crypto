@@ -105,7 +105,7 @@ var ECDH = function(ctx) {
 
             W = [];
 
-            len = pad; 
+            len = pad;
 
             if (sha >= len) {
                 for (i = 0; i < len; i++) {
@@ -445,7 +445,7 @@ var ECDH = function(ctx) {
             s.toBytes(S);
 
             WP = G.mul(s);
-            WP.toBytes(W,false);  // To use point compression on public keys, change to true 
+            WP.toBytes(W,false);  // To use point compression on public keys, change to true
 
             return res;
         },
@@ -740,4 +740,8 @@ var ECDH = function(ctx) {
     };
 
     return ECDH;
+};
+
+module.exports = {
+    ECDH
 };

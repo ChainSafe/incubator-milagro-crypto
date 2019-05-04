@@ -513,3 +513,7 @@ rsa_public_key = function(ctx) {
 
     return rsa_public_key;
 };
+
+module.exports = {
+    RSA
+};

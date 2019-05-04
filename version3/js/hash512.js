@@ -275,3 +275,7 @@ var HASH512 = function(ctx) {
 
     return HASH512;
 };
+
+module.exports = {
+    HASH512
+};

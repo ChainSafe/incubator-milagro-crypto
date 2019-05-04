@@ -59,3 +59,7 @@ var UInt64 = function() {
 
     return UInt64;
 };
+
+module.exports = {
+    UInt64
+};

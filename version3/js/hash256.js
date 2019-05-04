@@ -196,3 +196,7 @@ var HASH256 = function() {
 
     return HASH256;
 };
+
+module.exports = {
+    HASH256
+};

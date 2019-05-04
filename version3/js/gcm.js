@@ -426,3 +426,7 @@ var GCM = function(ctx) {
 
     return GCM;
 };
+
+module.exports = {
+    GCM
+};

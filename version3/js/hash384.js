@@ -273,3 +273,7 @@ var HASH384 = function(ctx) {
 
     return HASH384;
 };
+
+module.exports = {
+    HASH384
+};

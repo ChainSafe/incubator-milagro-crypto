@@ -703,3 +703,7 @@ var AES = function() {
 
     return AES;
 };
+
+module.exports = {
+    AES
+};

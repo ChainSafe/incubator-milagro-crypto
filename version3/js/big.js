@@ -959,7 +959,7 @@ BIG = function(ctx) {
     BIG.sqr = function(a) {
         var c = new ctx.DBIG(0),
             n, t, j, i, co;
- 
+
         c.w[0] = a.w[0] * a.w[0];
 
         for (j = 1; j < BIG.NLEN - 1;) {
@@ -1445,4 +1445,9 @@ DBIG = function(ctx) {
     };
 
     return DBIG;
+};
+
+module.exports = {
+    BIG,
+    DBIG
 };

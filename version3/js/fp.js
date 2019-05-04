@@ -175,7 +175,7 @@ var FP = function(ctx) {
 				sr=ctx.BIG.ssn(r,this.f,m);  // optimized combined shift, subtract and norm
 				this.f.cmove(r,1-sr);
 				sb--;
-			}			
+			}
 
             this.XES = 1;
         },
@@ -329,19 +329,19 @@ var FP = function(ctx) {
 			var xp=[];
 			var ac=[1,2,3,6,12,15,30,60,120,240,255];
 // phase 1
-			
-			xp[0]=new FP(this);	// 1 
+
+			xp[0]=new FP(this);	// 1
 			xp[1]=new FP(this); xp[1].sqr(); // 2
 			xp[2]=new FP(xp[1]); xp[2].mul(this);  //3
-			xp[3]=new FP(xp[2]); xp[3].sqr();  // 6 
+			xp[3]=new FP(xp[2]); xp[3].sqr();  // 6
 			xp[4]=new FP(xp[3]); xp[4].sqr();  // 12
 			xp[5]=new FP(xp[4]); xp[5].mul(xp[2]);  // 15
 			xp[6]=new FP(xp[5]); xp[6].sqr();  // 30
 			xp[7]=new FP(xp[6]); xp[7].sqr();  // 60
 			xp[8]=new FP(xp[7]); xp[8].sqr();  // 120
 			xp[9]=new FP(xp[8]); xp[9].sqr();  // 240
-			xp[10]=new FP(xp[9]); xp[10].mul(xp[5]);  // 255		
-			
+			xp[10]=new FP(xp[9]); xp[10].mul(xp[5]);  // 255
+
 
 			n=FP.MODBITS;
 			if (FP.MODTYPE == FP.GENERALISED_MERSENNE)   // Goldilocks ONLY
@@ -362,7 +362,7 @@ var FP = function(ctx) {
 			if (k!=0)
 			{
 				while (ac[i]>k) i--;
-				key.copy(xp[i]); 
+				key.copy(xp[i]);
 				k-=ac[i];
 			}
 			while (k!=0)
@@ -370,14 +370,14 @@ var FP = function(ctx) {
 				i--;
 				if (ac[i]>k) continue;
 				key.mul(xp[i]);
-				k-=ac[i]; 
+				k-=ac[i];
 			}
 
-// phase 2 
+// phase 2
 			xp[1].copy(xp[2]);
 			xp[2].copy(xp[5]);
 			xp[3].copy(xp[10]);
-	
+
 			j=3; m=8;
 			nw=n-bw;
 			var t=new FP(0);
@@ -385,7 +385,7 @@ var FP = function(ctx) {
 			{
 				t.copy(xp[j++]);
 				for (i=0;i<m;i++)
-					t.sqr(); 
+					t.sqr();
 				xp[j].copy(xp[j-1]);
 				xp[j].mul(t);
 				m*=2;
@@ -410,7 +410,7 @@ var FP = function(ctx) {
 			{
 				for (i=0;i<bw;i++ )
 					r.sqr();
-				r.mul(key); 
+				r.mul(key);
 			}
 
 			if (FP.MODTYPE == FP.GENERALISED_MERSENNE)   // Goldilocks ONLY
@@ -438,7 +438,7 @@ var FP = function(ctx) {
 					this.mul(t);
 					y.sqr();
 
-				} 
+				}
 				y.sqr();
 				y.sqr();
 				this.mul(y);
@@ -583,7 +583,7 @@ var FP = function(ctx) {
 			den=(m.w[ctx.BIG.NLEN-1]<<sh)|(m.w[ctx.BIG.NLEN-2]>>(ctx.BIG.BASEBITS-sh));
 		} else {
 			num=n.w[ctx.BIG.NLEN-1];
-			den=m.w[ctx.BIG.NLEN-1];			
+			den=m.w[ctx.BIG.NLEN-1];
 		}
 		return Math.floor(num/(den+1))
 	};
@@ -664,4 +664,8 @@ var FP = function(ctx) {
     };
 
     return FP;
+};
+
+module.exports = {
+  FP
 };

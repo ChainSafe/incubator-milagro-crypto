@@ -1043,3 +1043,7 @@ var ECP8 = function(ctx) {
 
     return ECP8;
 };
+
+module.exports = {
+    ECP8
+};

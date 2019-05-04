@@ -77,7 +77,7 @@ var BLS256 = function(ctx) {
 			var s=ctx.BIG.randomnum(q,rng);
             s.toBytes(S);
             G = ctx.PAIR256.G2mul(G,s);
-            G.toBytes(W);  // To use point compression on public keys, change to true 
+            G.toBytes(W);  // To use point compression on public keys, change to true
 			return this.BLS_OK;
 
 		},
@@ -101,7 +101,7 @@ var BLS256 = function(ctx) {
 			var PK=ctx.ECP8.fromBytes(W);
 			D.neg();
 
-// Use new multi-pairing mechanism 
+// Use new multi-pairing mechanism
 			var r=ctx.PAIR256.initmp();
 			ctx.PAIR256.another(r,G,D);
 			ctx.PAIR256.another(r,PK,HM);
@@ -118,5 +118,8 @@ var BLS256 = function(ctx) {
     };
 
     return BLS256;
-};	
-		
+};
+
+module.exports = {
+	BLS256
+};

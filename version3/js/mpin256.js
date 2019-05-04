@@ -275,7 +275,7 @@ var MPIN256 = function(ctx) {
                 u.dec(1);
                 u.norm();
                 r++;
-                R.setxi(u, s); 
+                R.setxi(u, s);
                 if (!R.is_infinity()) {
                     break;
                 }
@@ -618,7 +618,7 @@ var MPIN256 = function(ctx) {
             P = ctx.PAIR256.G1mul(P, px);
             P.neg();
             P.toBytes(SEC,false);
- 
+
             return 0;
         },
 
@@ -1048,4 +1048,8 @@ var MPIN256 = function(ctx) {
     };
 
     return MPIN256;
+};
+
+module.exports = {
+    MPIN256
 };

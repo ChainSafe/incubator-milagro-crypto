@@ -59,7 +59,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 32,
-			"@SH": 9, 
+			"@SH": 9,
             "@AK": 16
         },
 
@@ -79,7 +79,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 32,
-			"@SH": 8, 
+			"@SH": 8,
             "@AK": 16
         },
 
@@ -98,7 +98,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 32,
-			"@SH": 8, 
+			"@SH": 8,
             "@AK": 16
         },
 
@@ -117,7 +117,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 48,
-			"@SH": 7, 
+			"@SH": 7,
             "@AK": 24
         },
 
@@ -136,7 +136,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 32,
-			"@SH": 8, 
+			"@SH": 8,
             "@AK": 16
         },
 
@@ -155,7 +155,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 32,
-			"@SH": 8, 
+			"@SH": 8,
             "@AK": 16
         },
 
@@ -174,7 +174,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 48,
-			"@SH": 9, 
+			"@SH": 9,
             "@AK": 24
         },
 
@@ -193,7 +193,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 64,
-			"@SH": 11, 
+			"@SH": 11,
             "@AK": 32
         },
 
@@ -212,7 +212,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 64,
-			"@SH": 4, 
+			"@SH": 4,
             "@AK": 32
         },
 
@@ -231,7 +231,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 64,
-			"@SH": 8, 
+			"@SH": 8,
             "@AK": 32
         },
 
@@ -250,7 +250,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 32,
-			"@SH": 8, 
+			"@SH": 8,
             "@AK": 16
         },
 
@@ -269,7 +269,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 32,
-			"@SH": 8, 
+			"@SH": 8,
             "@AK": 16
         },
 
@@ -288,7 +288,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 48,
-			"@SH": 7, 
+			"@SH": 7,
             "@AK": 24
         },
 
@@ -307,7 +307,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 48,
-			"@SH": 7, 
+			"@SH": 7,
             "@AK": 24
         },
 
@@ -326,7 +326,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 64,
-			"@SH": 11, 
+			"@SH": 11,
             "@AK": 32
         },
 
@@ -345,7 +345,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 0,
             "@HT": 64,
-			"@SH": 11, 
+			"@SH": 11,
             "@AK": 32
         },
 
@@ -364,7 +364,7 @@ var CTX = function(input_parameter) {
             "@SX": 1,
             "@AB": 66,
             "@HT": 32,
-			"@SH": 8, 
+			"@SH": 8,
             "@AK": 16
         },
 
@@ -383,7 +383,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 130,
             "@HT": 32,
-			"@SH": 11, 
+			"@SH": 11,
             "@AK": 16
         },
 
@@ -402,7 +402,7 @@ var CTX = function(input_parameter) {
             "@SX": 1,
             "@AB": 66,
             "@HT": 32,
-			"@SH": 10, 
+			"@SH": 10,
             "@AK": 16
         },
 
@@ -421,7 +421,7 @@ var CTX = function(input_parameter) {
             "@SX": 1,
             "@AB": 66,
             "@HT": 32,
-			"@SH": 10, 
+			"@SH": 10,
             "@AK": 16
         },
 
@@ -440,7 +440,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 65,
             "@HT": 32,
-			"@SH": 8, 
+			"@SH": 8,
             "@AK": 16
         },
 
@@ -459,7 +459,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 49,
             "@HT": 48,
-			"@SH": 4, 
+			"@SH": 4,
             "@AK": 24
         },
 
@@ -478,7 +478,7 @@ var CTX = function(input_parameter) {
             "@SX": 0,
             "@AB": 32,
             "@HT": 64,
-			"@SH": 11, 
+			"@SH": 11,
             "@AK": 32
         },
 
@@ -497,7 +497,7 @@ var CTX = function(input_parameter) {
             "@SX": 1,
             "@AB": 65,
             "@HT": 32,
-			"@SH": 10, 
+			"@SH": 10,
             "@AK": 16
         },
 
@@ -516,7 +516,7 @@ var CTX = function(input_parameter) {
             "@SX": 1,
             "@AB": 78,
             "@HT": 32,
-			"@SH": 11, 
+			"@SH": 11,
             "@AK": 16
         },
 
@@ -637,4 +637,8 @@ var CTX = function(input_parameter) {
         return;
     }
 
+};
+
+module.exports = {
+    CTX
 };

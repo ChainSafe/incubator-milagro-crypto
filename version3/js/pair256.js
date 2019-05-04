@@ -139,7 +139,7 @@ var PAIR256 = function(ctx) {
 			for (var i=ctx.ECP.ATE_BITS-1; i>=1; i--)
 			{
 				res.sqr();
-				res.ssmul(r[i]); 
+				res.ssmul(r[i]);
 			}
 
 			if (ctx.ECP.SIGN_OF_X==ctx.ECP.NEGATIVEX)
@@ -180,7 +180,7 @@ var PAIR256 = function(ctx) {
 			{
 				lv=PAIR256.line(A,A,Qx,Qy);
 
-				bt=n3.bit(i)-n.bit(i); 
+				bt=n3.bit(i)-n.bit(i);
 				if (bt==1)
 				{
 					lv2=PAIR256.line(A,P,Qx,Qy);
@@ -192,7 +192,7 @@ var PAIR256 = function(ctx) {
 					lv.smul(lv2);
 				}
 				r[i].ssmul(lv);
-			} 
+			}
 		},
 
 
@@ -208,8 +208,8 @@ var PAIR256 = function(ctx) {
 			var P=new ctx.ECP8(); P.copy(P1); P.affine();
 			var Q=new ctx.ECP(); Q.copy(Q1); Q.affine();
 
-            Qx = new ctx.FP(Q.getx()); 
-            Qy = new ctx.FP(Q.gety()); 
+            Qx = new ctx.FP(Q.getx());
+            Qy = new ctx.FP(Q.gety());
 
             A = new ctx.ECP8();
             r = new ctx.FP48(1);
@@ -260,11 +260,11 @@ var PAIR256 = function(ctx) {
 			var S=new ctx.ECP(); S.copy(S1); S.affine();
 
 
-            Qx = new ctx.FP(Q.getx()); 
-            Qy = new ctx.FP(Q.gety()); 
+            Qx = new ctx.FP(Q.getx());
+            Qy = new ctx.FP(Q.gety());
 
-            Sx = new ctx.FP(S.getx()); 
-            Sy = new ctx.FP(S.gety()); 
+            Sx = new ctx.FP(S.getx());
+            Sy = new ctx.FP(S.gety());
 
             A = new ctx.ECP8();
             B = new ctx.ECP8();
@@ -604,7 +604,7 @@ var PAIR256 = function(ctx) {
 
             u = PAIR256.gs(e);
             t = new ctx.BIG(0);
-          
+
             Q[0] = new ctx.ECP8();
             Q[0].copy(P);
 
@@ -678,4 +678,8 @@ var PAIR256 = function(ctx) {
     };
 
     return PAIR256;
+};
+
+module.exports = {
+    PAIR256
 };

@@ -837,3 +837,7 @@ var ECP4 = function(ctx) {
 
     return ECP4;
 };
+
+module.exports = {
+    ECP4
+};

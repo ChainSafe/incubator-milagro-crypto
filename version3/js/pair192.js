@@ -139,7 +139,7 @@ var PAIR192 = function(ctx) {
 			for (var i=ctx.ECP.ATE_BITS-1; i>=1; i--)
 			{
 				res.sqr();
-				res.ssmul(r[i]); 
+				res.ssmul(r[i]);
 			}
 
 			if (ctx.ECP.SIGN_OF_X==ctx.ECP.NEGATIVEX)
@@ -180,7 +180,7 @@ var PAIR192 = function(ctx) {
 			{
 				lv=PAIR192.line(A,A,Qx,Qy);
 
-				bt=n3.bit(i)-n.bit(i); 
+				bt=n3.bit(i)-n.bit(i);
 				if (bt==1)
 				{
 					lv2=PAIR192.line(A,P,Qx,Qy);
@@ -192,7 +192,7 @@ var PAIR192 = function(ctx) {
 					lv.smul(lv2);
 				}
 				r[i].ssmul(lv);
-			} 
+			}
 		},
 
 
@@ -208,8 +208,8 @@ var PAIR192 = function(ctx) {
 			var P=new ctx.ECP4(); P.copy(P1); P.affine();
 			var Q=new ctx.ECP(); Q.copy(Q1); Q.affine();
 
-            Qx = new ctx.FP(Q.getx()); 
-            Qy = new ctx.FP(Q.gety()); 
+            Qx = new ctx.FP(Q.getx());
+            Qy = new ctx.FP(Q.gety());
 
             A = new ctx.ECP4();
             r = new ctx.FP24(1);
@@ -527,7 +527,7 @@ var PAIR192 = function(ctx) {
 
             u = PAIR192.gs(e);
             t = new ctx.BIG(0);
-          
+
             Q[0] = new ctx.ECP4();
             Q[0].copy(P);
 
@@ -601,4 +601,8 @@ var PAIR192 = function(ctx) {
     };
 
     return PAIR192;
+};
+
+module.exports = {
+    PAIR192
 };

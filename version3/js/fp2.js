@@ -150,7 +150,7 @@ var FP2 = function(ctx) {
 
         /* this-=x */
         sub: function(x) {
-            var m = new FP2(x); 
+            var m = new FP2(x);
             m.neg();
             this.add(m);
         },
@@ -324,7 +324,7 @@ var FP2 = function(ctx) {
         /* w*=(1+sqrt(-1)) */
         /* where X*2-(1+sqrt(-1)) is irreducible for FP4, assumes p=3 mod 8 */
         mul_ip: function() {
-            var t = new FP2(this), 
+            var t = new FP2(this),
                 z = new ctx.FP(this.a);
 
             this.a.copy(this.b);
@@ -363,7 +363,7 @@ var FP2 = function(ctx) {
             this.norm();
 
             var r = new FP2(1),
-                x = new FP2(this), 
+                x = new FP2(this),
                 bt;
 
             e.norm();
@@ -390,4 +390,9 @@ var FP2 = function(ctx) {
     };
 
     return FP2;
+};
+
+
+module.exports = {
+    FP2
 };

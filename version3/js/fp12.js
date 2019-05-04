@@ -178,9 +178,9 @@ var FP12 = function(ctx) {
 
         /* Granger-Scott Unitary Squaring */
         usqr: function() {
-            var A = new ctx.FP4(this.a), 
-                B = new ctx.FP4(this.c), 
-                C = new ctx.FP4(this.b), 
+            var A = new ctx.FP4(this.a),
+                B = new ctx.FP4(this.c),
+                C = new ctx.FP4(this.b),
                 D = new ctx.FP4(0);
 
             this.a.sqr();
@@ -220,14 +220,14 @@ var FP12 = function(ctx) {
 			if (this.stype==ctx.FP.ONE)
 				return;
 
-            var A = new ctx.FP4(this.a), 
-                B = new ctx.FP4(this.b), 
-                C = new ctx.FP4(this.c), 
-                D = new ctx.FP4(this.a); 
+            var A = new ctx.FP4(this.a),
+                B = new ctx.FP4(this.b),
+                C = new ctx.FP4(this.c),
+                D = new ctx.FP4(this.a);
 
             A.sqr();
             B.mul(this.c);
-            B.add(B); 
+            B.add(B);
             C.sqr();
             D.mul(this.b);
             D.add(D);
@@ -259,12 +259,12 @@ var FP12 = function(ctx) {
 
         /* FP12 full multiplication this=this*y */
         mul: function(y) {
-            var z0 = new ctx.FP4(this.a), 
+            var z0 = new ctx.FP4(this.a),
                 z1 = new ctx.FP4(0),
-                z2 = new ctx.FP4(this.b), 
+                z2 = new ctx.FP4(this.b),
                 z3 = new ctx.FP4(0),
-                t0 = new ctx.FP4(this.a), 
-                t1 = new ctx.FP4(y.a); 
+                t0 = new ctx.FP4(this.a),
+                t1 = new ctx.FP4(y.a);
 
             z0.mul(y.a);
             z2.mul(y.b);
@@ -330,10 +330,10 @@ var FP12 = function(ctx) {
 
 /* FP12 multiplication w=w*y */
 /* catering for special case that arises from special form of ATE pairing line function */
-/* w and y are both sparser line functions - cost = 6m */ 
+/* w and y are both sparser line functions - cost = 6m */
 		smul: function(y) {
 			if (ctx.ECP.SEXTIC_TWIST==ctx.ECP.D_TYPE)
-			{	
+			{
 				var w1=new ctx.FP2(this.a.geta());
 				var w2=new ctx.FP2(this.a.getb());
 				var w3=new ctx.FP2(this.b.geta());
@@ -507,7 +507,7 @@ var FP12 = function(ctx) {
 
 				t0.copy(this.a); t0.add(this.c); t0.norm();
 				t1.copy(y.a); t1.add(y.c); t1.norm();
-	
+
 				t0.mul(t1);
 				z2.add(t0);
 
@@ -552,7 +552,7 @@ var FP12 = function(ctx) {
 					return;
 				}
 				if (ctx.ECP.SEXTIC_TWIST==ctx.ECP.D_TYPE)
-				{ // dense by sparser - 13m 
+				{ // dense by sparser - 13m
 					var z0=new ctx.FP4(this.a);
 					var z2=new ctx.FP4(this.b);
 					var z3=new ctx.FP4(this.b);
@@ -595,7 +595,7 @@ var FP12 = function(ctx) {
 					var z3=new ctx.FP4(0);
 					var t0=new ctx.FP4(this.a);
 					var t1=new ctx.FP4(0);
-		
+
 					z0.mul(y.a);
 					t0.add(this.b); t0.norm();
 
@@ -603,13 +603,13 @@ var FP12 = function(ctx) {
 					t0.copy(this.b); t0.add(this.c);
 					t0.norm();
 
-					z3.copy(t0); 
+					z3.copy(t0);
 					z3.pmul(y.c.getb());
 					z3.times_i();
 
 					t0.copy(z0); t0.neg();
 					z1.add(t0);
-					this.b.copy(z1); 
+					this.b.copy(z1);
 					z2.copy(t0);
 
 					t0.copy(this.a); t0.add(this.c); t0.norm();
@@ -617,8 +617,8 @@ var FP12 = function(ctx) {
 
 					t0.mul(t1);
 					z2.add(t0);
-					t0.copy(this.c); 
-			
+					t0.copy(this.c);
+
 					t0.pmul(y.c.getb());
 					t0.times_i();
 					t1.copy(t0); t1.neg();
@@ -630,7 +630,7 @@ var FP12 = function(ctx) {
 					z3.norm();
 					z3.times_i();
 					this.a.copy(z0); this.a.add(z3);
-				}	
+				}
 			}
 			this.stype=ctx.FP.DENSE;
 			this.norm();
@@ -638,9 +638,9 @@ var FP12 = function(ctx) {
 
         /* this=1/this */
         inverse: function() {
-            var f0 = new ctx.FP4(this.a), 
-                f1 = new ctx.FP4(this.b), 
-                f2 = new ctx.FP4(this.a), 
+            var f0 = new ctx.FP4(this.a),
+                f1 = new ctx.FP4(this.b),
+                f2 = new ctx.FP4(this.a),
                 f3 = new ctx.FP4(0);
 
             f0.sqr();
@@ -784,7 +784,7 @@ var FP12 = function(ctx) {
 
 			sf = new FP12(this);
 			sf.norm();
-            w = new FP12(sf); 
+            w = new FP12(sf);
             nb = e3.nbits();
 
             for (i = nb - 2; i >= 1; i--) {
@@ -882,7 +882,7 @@ var FP12 = function(ctx) {
             t[i] = w[i + ctx.BIG.MODBYTES];
         }
         b = ctx.BIG.fromBytes(t);
-        c = new ctx.FP2(a, b); 
+        c = new ctx.FP2(a, b);
 
         for (i = 0; i < ctx.BIG.MODBYTES; i++) {
             t[i] = w[i + 2 * ctx.BIG.MODBYTES];
@@ -892,9 +892,9 @@ var FP12 = function(ctx) {
             t[i] = w[i + 3 * ctx.BIG.MODBYTES];
         }
         b = ctx.BIG.fromBytes(t);
-        d = new ctx.FP2(a, b); 
+        d = new ctx.FP2(a, b);
 
-        e = new ctx.FP4(c, d); 
+        e = new ctx.FP4(c, d);
 
         for (i = 0; i < ctx.BIG.MODBYTES; i++) {
             t[i] = w[i + 4 * ctx.BIG.MODBYTES];
@@ -904,7 +904,7 @@ var FP12 = function(ctx) {
             t[i] = w[i + 5 * ctx.BIG.MODBYTES];
         }
         b = ctx.BIG.fromBytes(t);
-        c = new ctx.FP2(a, b); 
+        c = new ctx.FP2(a, b);
 
         for (i = 0; i < ctx.BIG.MODBYTES; i++) {
             t[i] = w[i + 6 * ctx.BIG.MODBYTES];
@@ -916,7 +916,7 @@ var FP12 = function(ctx) {
         b = ctx.BIG.fromBytes(t);
         d = new ctx.FP2(a, b);
 
-        f = new ctx.FP4(c, d); 
+        f = new ctx.FP4(c, d);
 
         for (i = 0; i < ctx.BIG.MODBYTES; i++) {
             t[i] = w[i + 8 * ctx.BIG.MODBYTES];
@@ -926,7 +926,7 @@ var FP12 = function(ctx) {
             t[i] = w[i + 9 * ctx.BIG.MODBYTES];
         }
         b = ctx.BIG.fromBytes(t);
-        c = new ctx.FP2(a, b); 
+        c = new ctx.FP2(a, b);
 
         for (i = 0; i < ctx.BIG.MODBYTES; i++) {
             t[i] = w[i + 10 * ctx.BIG.MODBYTES];
@@ -936,11 +936,11 @@ var FP12 = function(ctx) {
             t[i] = w[i + 11 * ctx.BIG.MODBYTES];
         }
         b = ctx.BIG.fromBytes(t);
-        d = new ctx.FP2(a, b); 
+        d = new ctx.FP2(a, b);
 
-        g = new ctx.FP4(c, d); 
+        g = new ctx.FP4(c, d);
 
-        r = new FP12(e, f, g); 
+        r = new FP12(e, f, g);
 
         return r;
     };
@@ -1032,4 +1032,8 @@ var FP12 = function(ctx) {
     };
 
     return FP12;
+};
+
+module.exports = {
+	FP12
 };

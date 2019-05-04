@@ -262,3 +262,7 @@ var SHA3 = function(ctx) {
 
     return SHA3;
 };
+
+module.exports = {
+    SHA3
+};

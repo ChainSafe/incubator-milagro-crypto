@@ -223,7 +223,7 @@ var MPIN = function(ctx) {
                 u.dec(1);
                 u.norm();
                 r++;
-                R.setxi(u, s); 
+                R.setxi(u, s);
                 if (!R.is_infinity()) {
                     break;
                 }
@@ -1001,4 +1001,8 @@ var MPIN = function(ctx) {
     };
 
     return MPIN;
+};
+
+module.exports = {
+    MPIN
 };

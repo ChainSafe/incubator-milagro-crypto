@@ -78,7 +78,7 @@ var BLS = function(ctx) {
             s.toBytes(S);
             G = ctx.PAIR.G2mul(G,s);
 
-            G.toBytes(W);  // To use point compression on public keys, change to true 
+            G.toBytes(W);  // To use point compression on public keys, change to true
 			return this.BLS_OK;
 		},
 
@@ -101,7 +101,7 @@ var BLS = function(ctx) {
 			var PK=ctx.ECP2.fromBytes(W);
 			D.neg();
 
-// Use new multi-pairing mechanism 
+// Use new multi-pairing mechanism
 			var r=ctx.PAIR.initmp();
 			ctx.PAIR.another(r,G,D);
 			ctx.PAIR.another(r,PK,HM);
@@ -118,5 +118,8 @@ var BLS = function(ctx) {
     };
 
     return BLS;
-};	
-		
+};
+
+module.exports = {
+	BLS
+};

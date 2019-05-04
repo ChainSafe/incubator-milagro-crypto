@@ -182,3 +182,7 @@ var RAND = function(ctx) {
 
     return RAND;
 };
+
+module.exports = {
+    RAND
+};
