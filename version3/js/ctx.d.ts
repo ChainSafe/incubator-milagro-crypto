@@ -6,6 +6,12 @@ export class FP2 {
     getA(): BIG;
 
     getB(): BIG;
+
+    inverse(): void;
+
+    mul(v: FP2): void;
+
+    reduce(): void;
 }
 
 export class ECPCommon<T> {
