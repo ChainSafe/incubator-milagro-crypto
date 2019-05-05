@@ -40,9 +40,9 @@ export class ECP extends ECPCommon<ECP>{
 
     static mapit(hash: Uint8Array): ECP;
 
-    setxy(x: FP, y: FP): void;
+    setxy(x: BIG, y: BIG): void;
 
-    setx(x: FP): void;
+    setx(x: BIG): void;
 
     copy(p: ECP): void;
 
@@ -52,9 +52,9 @@ export class ECP extends ECPCommon<ECP>{
 
     affine(): void;
 
-    getX(): FP;
+    getX(): BIG;
 
-    getY(): FP;
+    getY(): BIG;
 
     getS(): boolean;
 
