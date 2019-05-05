@@ -17,7 +17,7 @@ export class FP2 {
 export class FP {
     constructor(c: FP | BIG | number);
 
-    redc(): FP;
+    redc(): BIG;
 
     neg(): void;
 }
