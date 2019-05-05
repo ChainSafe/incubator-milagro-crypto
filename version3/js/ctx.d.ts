@@ -116,6 +116,7 @@ export class CTX {
     public ECP: typeof ECP;
     public ECP2: typeof ECP2;
     public FP2: typeof FP2;
+    public FP: typeof FP;
     public BIG: typeof BIG;
     public ROM_FIELD: RomField;
 }
