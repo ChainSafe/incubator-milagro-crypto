@@ -42,6 +42,8 @@ export class ECP extends ECPCommon<ECP>{
 
     setxy(x: FP, y: FP): void;
 
+    setx(x: FP): void;
+
     copy(p: ECP): void;
 
     neg(): void;
