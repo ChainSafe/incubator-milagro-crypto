@@ -14,6 +14,14 @@ export class FP2 {
     reduce(): void;
 }
 
+export class FP {
+    constructor(c: FP | BIG | number);
+
+    redc(): FP;
+
+    neg(): void;
+}
+
 export class ECPCommon<T> {
 
     is_infinity(): boolean;
@@ -31,6 +39,8 @@ export class ECP extends ECPCommon<ECP>{
     static fromBytes(array: Uint8Array): ECP;
 
     static mapit(hash: Uint8Array): ECP;
+
+    setxy(x: FP, y: FP): void;
 
     copy(p: ECP): void;
 
