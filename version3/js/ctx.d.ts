@@ -52,9 +52,9 @@ export class ECP extends ECPCommon<ECP>{
 
     affine(): void;
 
-    getX(): ECP;
+    getX(): FP;
 
-    getY(): ECP;
+    getY(): FP;
 
     getS(): boolean;
 
