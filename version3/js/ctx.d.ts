@@ -70,6 +70,8 @@ export class ECP2 extends ECPCommon<ECP2>{
 
     getY(): FP2;
 
+    affine(): void;
+
 }
 
 
@@ -88,6 +90,8 @@ export class BIG implements BIG {
     norm(): void;
 
     isunity(): boolean;
+
+    iszilch(): boolean;
 
     tobytearray(array: Uint8Array, offset: number): void;
 
