@@ -30,6 +30,8 @@ export class ECPCommon<T> {
 
     mul(a: BIG): T;
 
+    equals(p: T): boolean;
+
 }
 
 export class ECP extends ECPCommon<ECP>{
@@ -63,8 +65,6 @@ export class ECP extends ECPCommon<ECP>{
     getX(): ECP;
 
     toBytes(destination: Uint8Array, compress: boolean): void;
-
-    equals(p: ECP): boolean;
 
 }
 
