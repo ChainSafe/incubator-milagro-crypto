@@ -1,3 +1,15 @@
+export class FP12 {
+
+    public equals(other: FP12): boolean;
+}
+
+export class PAIR {
+
+    public ate(p1: ECP2, q1: ECP): FP12;
+
+    public fexp(p: FP12): FP12;
+}
+
 export class FP2 {
     constructor(c: BIG | FP2, d?: BIG);
 
@@ -118,7 +130,9 @@ export class CTX {
     public ECP: typeof ECP;
     public ECP2: typeof ECP2;
     public FP2: typeof FP2;
+    public FP12: typeof FP12;
     public FP: typeof FP;
+    public PAIR: PAIR;
     public BIG: typeof BIG;
     public ROM_FIELD: RomField;
 }
