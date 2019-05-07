@@ -1,5 +1,9 @@
 export class FP12 {
 
+    constructor(d: number | FP12, e?: number, f?: number);
+
+    public mul(other: FP12): void;
+
     public equals(other: FP12): boolean;
 }
 
