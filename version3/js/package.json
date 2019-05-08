@@ -1,0 +1,18 @@
+{
+  "name": "@chainsafe/amcl",
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "main": "ctx.js",
+  "files": [
+    "*.js",
+    "*.ts"
+  ],
+  "scripts": {
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "devDependencies": {
+  }
+}
