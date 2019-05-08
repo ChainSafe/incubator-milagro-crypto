@@ -1,18 +1,17 @@
 {
-  "name": "@chainsafe/amcl",
-  "version": "1.0.0",
+  "name": "@mpetrunic/amcl",
+  "version": "1.0.1",
   "description": "",
   "private": false,
   "main": "ctx.js",
+  "types": "ctx.d.ts",
   "files": [
     "*.js",
     "*.ts"
   ],
-  "scripts": {
-  },
+  "scripts": {},
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {},
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
