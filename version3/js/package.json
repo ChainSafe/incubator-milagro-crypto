@@ -1,7 +1,9 @@
 {
   "name": "@chainsafe/amcl",
-  "version": "1.0.1",
-  "description": "",
+  "version": "0.1.0",
+  "description": "The Apache Milagro Cryptographic Library in Javascript",
+  "author": "ChainSafe Systems",
+  "license": "Apache-2.0",
   "private": false,
   "main": "ctx.js",
   "types": "ctx.d.ts",
@@ -10,8 +12,6 @@
     "*.ts"
   ],
   "scripts": {},
-  "author": "",
-  "license": "Apache-2.0",
   "dependencies": {},
   "devDependencies": {}
 }
